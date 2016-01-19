@@ -7,16 +7,17 @@ SSL.
 
 ## Adding new content
 
-To host a new repo, add the GitHub git URL (HTTPS version, not the ssh version)
+To host a new repo, add the GitHub git URL (HTTPS version, not the SSH version)
 to the REPOS file and deploy.
 
 ## How it works
 
 Dokku sees the Dockerfile and runs it. This builds a simple container
-which runs a lite version of nginx to do static hosting.
+which runs a lite version of nginx to server static content off the
+filesystem.
 
-When the container launches, all the repos in REPOS are checked out
-locally and are available to the world.
+When the container launches, the repos in REPOS are cloned locally and made
+available to the world.
 
 # License
 
