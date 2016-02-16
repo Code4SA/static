@@ -6,4 +6,5 @@ for r in `cat REPOS`; do
   git clone $r
 done
 
+echo "Starting nginx to serve static content"
 nginx -c /app/.nginx.conf
